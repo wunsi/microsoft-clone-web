@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+:root {
+	--black-color: rgb(0, 0, 0);
+	--white-color: rgb(255, 255, 255);
+	--purple-color: rgb(212, 198, 230);
+  --background-color: rgb(241, 239, 233); 
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+header {
+	position: sticky;
+	top: 0;
+  z-index: 1204;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 1rem;
+	align-items: center;
+  background-color: var(--background-color);
+  box-shadow: 0 0 15px 20px var(--background-color);
+} 
+
+nav a,
+nav div {
+	flex: 1 0 auto;
+}
+
+nav .logo {
+	text-align: center;
+}
+
+nav .logo img {
+	max-width: 150px;
+}
+
+nav .nav-action ul {
+	list-style: none;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	column-gap: 3rem;
+}
+
+nav .nav-action ul li button {
+	border: none;
+	background-color: transparent;
+	font-weight: bold;
+	letter-spacing: 6px;
+	padding: 0.5rem 0;
+	text-transform: uppercase;
+}
+
+nav .nav-action ul li button span {
+	z-index: 2;
+}
+
+nav .nav-action ul li button #bg {
+	content: "";
+	background-color: var(--purple-color);
+	width: 72%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	transition: height 0.2s linear;
+}
+
+nav .nav-action ul li button:hover #bg {
+	height: 20%;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 1440px;
+	min-height: 200vh;
+  z-index: 1000;
+}
+
+
